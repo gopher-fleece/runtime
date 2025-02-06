@@ -1,4 +1,4 @@
-module github.com/gopher-fleece/gleece-runtime
+module github.com/gopher-fleece/runtime
 
 go 1.23.6
 
