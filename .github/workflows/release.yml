@@ -25,4 +25,4 @@ jobs:
 
     - name: 🔔 Notify pkg.go.dev 
       run: |
-        curl -sSf https://proxy.golang.org/github.com/gopher-fleece/gleece/@v/${{ env.VERSION }}.info || echo "Failed to notify pkg.go.dev"
+        curl -sSf https://proxy.golang.org/github.com/gopher-fleece/runtime/@v/${{ env.VERSION }}.info || echo "Failed to notify pkg.go.dev"
