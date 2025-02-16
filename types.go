@@ -153,3 +153,16 @@ type SecurityError struct {
 	StatusCode  HttpStatusCode
 	CustomError *CustomError
 }
+
+type MiddlewareExecutionType string
+
+const (
+	BeforeOperation       MiddlewareExecutionType = "beforeOperation"
+	AfterOperationSuccess MiddlewareExecutionType = "afterOperationSuccess"
+)
+
+type ErrorMiddlewareExecutionType string
+
+const (
+	OnOperationError ErrorMiddlewareExecutionType = "onOperationError"
+)
