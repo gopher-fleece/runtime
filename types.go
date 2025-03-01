@@ -164,5 +164,7 @@ const (
 type ErrorMiddlewareExecutionType string
 
 const (
-	OnOperationError ErrorMiddlewareExecutionType = "onOperationError"
+	OnOperationError        ErrorMiddlewareExecutionType = "onOperationError"
+	OnInputValidationError  ErrorMiddlewareExecutionType = "onInputValidationError"
+	OnOutputValidationError ErrorMiddlewareExecutionType = "onOutputValidationError"
 )
