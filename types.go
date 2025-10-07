@@ -1,5 +1,7 @@
 package runtime
 
+import "fmt"
+
 type HttpStatusCode uint
 
 // Taken from net/http
@@ -81,6 +83,13 @@ type Rfc7807Error struct {
 	Status     int               `json:"status"`
 	Instance   string            `json:"instance"`
 	Extensions map[string]string `json:"extensions"`
+}
+
+// Error implements the error interface for Rfc7807Error.
+func (e *Rfc7807Error) Error() string {
+	// Format all RFC-7807 fields into error string
+	return fmt.Sprintf("error: type=%s, title=%s, detail=%s, status=%d, instance=%s, extensions=%v",
+		e.Type, e.Title, e.Detail, e.Status, e.Instance, e.Extensions)
 }
 
 // GleeceController provides common functionality for controllers.
